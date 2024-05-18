@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Site interessante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+            overflow-x: hidden;
+        }
+        header {
+            background: #4c5baf;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .hero {
+            background: url('https://picsum.photos/1600/900');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Nossa Página Inicial!</h1>
+    </header>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <div class="hero">
+        <h1>Explore o Incrível</h1>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada a fornecer as melhores soluções para nossos clientes. Nossa equipe está sempre pronta para ajudar você a alcançar seus objetivos.</p>
+        </div>
+        <div class="card">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos uma variedade de serviços para atender às suas necessidades, incluindo desenvolvimento web, marketing digital, e muito mais.</p>
+        </div>
+        <div class="card">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida? Gostaria de saber mais sobre nossos serviços? Entre em contato conosco e teremos o prazer de ajudar!</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Anderson Karl. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
