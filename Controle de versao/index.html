@@ -135,6 +135,27 @@
 
         .button_on_right {
             float: right;
+            margin: 10px 20px;
+        }
+
+        .button_on_right button {
+            background-color: #4c5baf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button_on_right button:hover {
+            background-color: #575757;
+            transform: scale(1.05);
+        }
+
+        .button_on_right button:active {
+            background-color: #333;
+            transform: scale(0.95);
         }
     </style>
 </head>
@@ -171,11 +192,6 @@
     </div>
 
     <div class="compact marquee">
-        <div class="button_on_right">
-            <button id="clear_button" onclick="clearButton(event)">
-                Clear
-            </button>
-        </div>
         <div id="info">
             <p id="info_start">
                 Clique no ícone do microfone e comece a falar o quanto quiser.
@@ -208,6 +224,11 @@
             <button id="start_button" onclick="startButton(event)"><img alt="Start" id="start_img"
                     src="https://cdn.iconscout.com/icon/free/png-256/free-mic-10204584-8279613.png" width="50"
                     height="50"></button>
+        </div>
+        <div class="button_on_right">
+            <button id="clear_button" onclick="clearButton(event)">
+                Clear
+            </button>
         </div>
         <div id="results">
             <span class="final" id="final_span"></span> <span class="interim" id="interim_span"></span>
