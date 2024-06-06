@@ -25,3 +25,6 @@ def main():
         print("All HTML files passed linting.")
     else:
         print("No HTML files to lint.")
+
+if __name__ == '__main__':
+    main()
