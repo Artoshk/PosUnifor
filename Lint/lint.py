@@ -4,7 +4,7 @@ def main():
     print("Imagine que ele tá rodando o lint")
     for i in range(10):
         time.sleep(0.5)
-        print('.', end='')
+        print('.', end='', flush=True)
     print()
     print("Lint finalizado com sucesso")
 
