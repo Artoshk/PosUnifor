@@ -5,10 +5,11 @@ import os
 def main():
     # Get the list of staged files.
     result = subprocess.run(['git', 'diff', '--cached', '--name-only', '--diff-filter=ACM'], capture_output=True, text=True)
-    files = result.stdout.splitlines()
+    
+    html_folder = "Controle de versao"
 
-    # Filter the list for HTML files.
-    html_files = [file for file in files if file.endswith('.html')]
+    # Get all the HTML files in the html folder.
+    html_files = [file for file in result.stdout.split('\n') if file.startswith(html_folder) and file.endswith('.html')]
 
     if html_files:
         print("Linting HTML files...")
