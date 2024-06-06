@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Site interessante</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #1739fd;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background: #575757;
+        }
+
+        .hero {
+            background: url('https://picsum.photos/1600/900');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #info {
+            font-size: 20px;
+        }
+
+        #div_start {
+            float: right;
+        }
+
+        #headline {
+            text-decoration: none
+        }
+
+        #results {
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+            min-height: 150px;
+        }
+
+        #start_button {
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .interim {
+            color: gray;
+        }
+
+        .final {
+            color: black;
+            padding-right: 3px;
+        }
+
+        .button {
+            display: none;
+        }
+
+        .marquee {
+            margin: 20px auto;
+        }
+
+        #buttons {
+            margin: 10px 0;
+            position: relative;
+            top: -50px;
+        }
+
+        .button_on_right {
+            float: right;
+            margin: 10px 20px;
+        }
+
+        .button_on_right button {
+            background-color: #1645dd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button_on_right button:hover {
+            background-color: #575757;
+            transform: scale(1.05);
+        }
+
+        .button_on_right button:active {
+            background-color: #333;
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao VozBrilhante!</h1>
+    </header>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <div class="hero">
+        <h1>Explore o Incrível</h1>
+    </div>
+    
+    <div class="content">
+        <div class="card">
+            <h2>Início</h2>
+            <p>Se você já se perguntou como sua voz poderia abrir portas para novas oportunidades, ou se você é apaixonado por expressão vocal, nós temos o lugar perfeito para você - bem-vindo ao VozBrilhante.com!
+            Nesse site estamos dedicados a ajudar você a desbloquear o poder da sua voz. Seja você um aspirante a podcaster, um narrador de audiolivros ou simplesmente alguém que quer aprimorar suas habilidades de comunicação, oferecemos recursos e ferramentas para ajudá-lo a alcançar seus objetivos.
+            Nossa plataforma é repleta de recursos inovadores projetados para elevar sua voz a novos patamares. Desde técnicas de gravação avançadas até dicas de modulação vocal, você encontrará tudo o que precisa para se destacar na multidão.</p>
+        </div>
+        <div class="card">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada a fornecer as melhores soluções para nossos clientes. Nossa equipe está sempre
+                pronta para ajudar você a alcançar seus objetivos.</p>
+        </div>
+        <div class="card">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos uma variedade de serviços para atender às suas necessidades, incluindo desenvolvimento web,
+                marketing digital, e muito mais.</p>
+        </div>
+        <div class="card">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida? Gostaria de saber mais sobre nossos serviços? Entre em contato conosco e teremos o
+                prazer de ajudar!</p>
+        </div>
+    </div>
+
+    <div class="compact marquee">
+        <div id="info">
+            <p id="info_start">
+                Clique no ícone do microfone e comece a falar o quanto quiser.
+            </p>
+            <p id="info_speak_now" style="display:none">
+                Fale agora.
+            </p>
+            <p id="info_no_speech" style="display:none">
+                Nenhuma fala foi detectada. Você precisa falar algo para que eu possa ouvir e transcrever.
+            </p>
+            <p id="info_no_microphone" style="display:none">
+                Microfone não detectado. Verifique se o microfone está conectado ou se o driver está instalado
+                corretamente.
+            </p>
+            <p id="info_allow" style="display:none">
+                Clique no botão "Permitir" acima para ativar o seu microfone.
+            </p>
+            <p id="info_denied" style="display:none">
+                Permissão para usar o microfone foi negada.
+            </p>
+            <p id="info_blocked" style="display:none">
+                Permissão para usar o microfone é bloqueada. Para alterar, acesse
+                chrome://settings/contentExceptions#media-stream
+            </p>
+            <p id="info_upgrade" style="display:none">
+                Atualize o seu navegador Chrome para uma versão mais recente.
+            </p>
+        </div>
+        <div id="div_start">
+            <button id="start_button" onclick="startButton(event)"><img alt="Start" id="start_img"
+                    src="https://cdn.iconscout.com/icon/free/png-256/free-mic-10204584-8279613.png" width="50"
+                    height="50"></button>
+        </div>
+        <div class="button_on_right">
+            <button id="clear_button" onclick="clearButton(event)">
+                Clear
+            </button>
+        </div>
+        <div id="results">
+            <span class="final" id="final_span"></span> <span class="interim" id="interim_span"></span>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Anderson Karl e Maria Elisa. Todos os direitos reservados.
+    </footer>
+</body>
+<script>
+    start_button.style.display = 'inline-block';
+    var recognition = new webkitSpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'pt-BR';
+
+    var final_transcript = '';
+    var recognizing = false;
+    var ignore_onend;
+    var start_timestamp;
+
+    // Eventos de reconhecimento
+    recognition.onstart = function () {
+        recognizing = true;
+        showInfo('info_speak_now');
+    };
+
+    // Evento de erro
+    recognition.onerror = function (event) {
+        if (event.error == 'no-speech') {
+            showInfo('info_no_speech');
+            ignore_onend = true;
+        }
+        if (event.error == 'audio-capture') {
+            showInfo('info_no_microphone');
+            ignore_onend = true;
+        }
+        if (event.error == 'not-allowed') {
+            if (event.timeStamp - start_timestamp < 100) {
+                showInfo('info_blocked');
+            } else {
+                showInfo('info_denied');
+            }
+            ignore_onend = true;
+        }
+    };
+
+    recognition.onend = function () {
+        recognizing = false;
+        if (ignore_onend) {
+            return;
+        }
+        if (!final_transcript) {
+            showInfo('info_start');
+            return;
+        }
+        showInfo('');
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+            var range = document.createRange();
+            range.selectNode(document.getElementById('final_span'));
+            window.getSelection().addRange(range);
+        }
+    };
+
+    recognition.onresult = function (event) {
+        var interim_transcript = '';
+        if (typeof (event.results) == 'undefined') {
+            recognition.onend = null;
+            recognition.stop();
+            upgrade();
+            return;
+        }
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+                final_transcript += event.results[i][0].transcript;
+            } else {
+                interim_transcript += event.results[i][0].transcript;
+            }
+        }
+        final_transcript = capitalize(final_transcript);
+        final_span.innerHTML = linebreak(final_transcript);
+        interim_span.innerHTML = linebreak(interim_transcript);
+        if (final_transcript || interim_transcript) {
+            showButtons('inline-block');
+        }
+    };
+
+    function upgrade() {
+        start_button.style.visibility = 'hidden';
+        showInfo('info_upgrade');
+    }
+
+    var two_line = /\n\n/g;
+    var one_line = /\n/g;
+    function linebreak(s) {
+        return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
+    }
+
+    var first_char = /\S/;
+    function capitalize(s) {
+        return s.replace(first_char, function (m) { return m.toUpperCase(); });
+    }
+
+    function startButton(event) {
+        if (recognizing) {
+            recognition.stop();
+            return;
+        }
+        final_transcript = '';
+        recognition.start();
+        ignore_onend = false;
+        final_span.innerHTML = '';
+        interim_span.innerHTML = '';
+        showInfo('info_allow');
+        showButtons('none');
+        start_timestamp = event.timeStamp;
+    }
+
+    function showInfo(s) {
+        if (s) {
+            for (var child = info.firstChild; child; child = child.nextSibling) {
+                if (child.style) {
+                    child.style.display = child.id == s ? 'inline' : 'none';
+                }
+            }
+            info.style.visibility = 'visible';
+        } else {
+            info.style.visibility = 'hidden';
+        }
+    }
+
+    var current_style;
+    function showButtons(style) {
+        if (style == current_style) {
+            return;
+        }
+        current_style = style;
+    }
+
+    function clearButton(event) {
+        final_transcript = '';
+        final_span.innerHTML = '';
+        interim_span.innerHTML = '';
+        // Stop the recognition in the browser 
+        recognition.stop();
+        showInfo('info_start');
+    }
+</script>
+
+</html>
