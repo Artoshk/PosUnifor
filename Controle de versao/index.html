@@ -380,9 +380,10 @@
         final_transcript = '';
         final_span.innerHTML = '';
         interim_span.innerHTML = '';
-        // Stop the recognition in the browser
+        // Stop the recognition in the browser (works only in Chrome)
         recognition.stop();
         showInfo('info_start');
+        //Revert
     }
 </script>
 
